@@ -20,6 +20,7 @@
 
 		<style type="text/css">
 			#suggestions .btn { margin: 5px 5px 0 0; }
+			.loading { opacity: 0.2; transition:opacity 1s; }
 		</style>
 	</head>
 	<body>
@@ -99,6 +100,7 @@
 			});
 
 			function loadSuggestions(form) {
+				$('#suggestions').addClass('loading');
 				var query = ($(form).serializeArray());
 				$.ajax({
 					cache: true,
@@ -110,6 +112,7 @@
 				}).success(
 					function(data) {
 						displaySuggestions(data);
+						$('#suggestions').removeClass('loading');
 					}
 				);
 			}
@@ -157,13 +160,15 @@
 			}
 
 			function loadResult(id) {
+				$('#result').addClass('loading');
 				$.ajax({
 					cache: true,
 					dataType: 'jsonp',
 					url: 'http://anyorigin.com/get/?url=' + encodeURIComponent('http://led.ot.lt/meaning.do?latn=0&wrd='+id),
 				}).success(
 					function(data) {
-					$('#result').html(data.contents);
+					$('#result').html(data.contents)
+						.removeClass('loading');
 					$('#result a').prop('href', null)
 						.on('click', function(event){event.preventDefault();});
 					$.scrollTo($('#result'), $('#result'));
