@@ -151,10 +151,8 @@
 						}
 						$('#suggestions').append(elem);
 					}
-					if(data.length == 1) {
-						if((data[0][1] != '0') && (data[0][1] != '-1')) {
-							loadResult(data[0][1]);
-						}
+					if((data[0][1] != '0') && (data[0][1] != '-1')) {
+						loadResult(data[0][1]);
 					}
 				}
 			}
