@@ -1,7 +1,7 @@
 Omni žodynas
 ====
 
-Šiame projekte rasite šiuolaikinę sąsaja Omni žodynui (http://led.ot.lt). Kadangi originalus dar 2006-aisiais suprogramuotas žodynas su šiuolaikinėmis naršyklėmis neveikia, o pasinaudoti juo retkarčiais norisi, užgimė idėja pabandyti sukurti jam naują sąsają. Ją rasite index.html faile.
+Šiame projekte rasite šiuolaikinę sąsaja Omni žodynui (http://led.ot.lt). Kadangi originalus dar 2006-aisiais suprogramuotas žodynas su šiuolaikinėmis naršyklėmis neveikia, o pasinaudoti juo retkarčiais norisi, užgimė idėja pabandyti sukurti jam naują sąsają. Ją rasite index.html faile, o įdiegtą – adresu http://lietuvybė.lt/led/.
 
 Šioje saugykloje esančiais failais galite naudotis savo nuožiūra, tačiau visą su jų naudojimu ir platinimu susijusią atsakomybę prisiimate sau. Konkretų saugyklos failams taikomos licencijos tekstą (anglų kalba) rasite faile LICENSE. Atkreipkite dėmesį, jog ši licencija taikoma tik šioje saugykoje esantiems failams (išskyrus failus, kurių licencijavimo sąlygos nurodytos jų viduje). Pačiam Omni žodynui (tiksliau, LED žodynui) yra taikoma visiškai kitokia licencija, ir į paties žodyno autorystę šio projekto autorius nepretenduoja ir nesikėsina.
 
