@@ -111,16 +111,30 @@
 					url: 'http://led.ot.lt/wordList.do',
 				}).success(
 					function(data) {
-						displaySuggestions(data);
+						displaySuggestions(data, (form.page.value != 1));
 						$('#suggestions').removeClass('loading');
 					}
 				);
 			}
 
-			function displaySuggestions(data) {
+			function displaySuggestions(data, showPrevLink) {
 				var elem;
 				if(data.length) {
 					$('#suggestions').empty();
+					if (showPrevLink) {
+						elem = document.createElement('button');
+						$(elem).addClass('btn btn-success')
+							.attr('type', 'button')
+							.html('Atgal…')
+							.on('click', function(event) {
+								var f = $('#form')[0];
+								f.page.value--;
+								loadSuggestions(f);
+								$.scrollTo($('#suggestions'), $('#suggestions'));
+								event.preventDefault();
+							});
+						$('#suggestions').append(elem);
+					}
 					for (var i = 0; i < data.length; i++) {
 						elem = document.createElement('button');
 						$(elem).addClass('btn')
